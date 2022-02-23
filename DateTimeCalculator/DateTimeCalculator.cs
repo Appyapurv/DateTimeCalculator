@@ -23,17 +23,17 @@ namespace DateTimeCalculator
 
                 string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
                 var data = JsonConvert.DeserializeObject<DateTimeModel>(requestBody);
-                var result = data.dateandtime - startTime;
+                var result = data?.dateandtime - startTime;
 
                 var resultModel = new TimeFormat();
                 if (result != null)
                 {
-                    resultModel.Days = result.Days;
-                    resultModel.Hours = result.Hours;
-                    resultModel.Minutes = result.Minutes;
-                    resultModel.Milliseconds = result.Milliseconds;
+                    resultModel.Days = result?.Days;
+                    resultModel.Hours = result?.Hours;
+                    resultModel.Minutes = result?.Minutes;
+                    resultModel.Seconds = result?.Seconds;
 
-                    output = $"Days Left - {resultModel.Days} , Hours Left - {resultModel.Hours} , Minutes Left - {resultModel.Minutes} , Second Left - {resultModel.Milliseconds}";
+                    output = $"Days Left - {resultModel.Days} , Hours Left - {resultModel.Hours} , Minutes Left - {resultModel.Minutes} , Second Left - {resultModel.Seconds}";
                 }
 
                 if (!string.IsNullOrWhiteSpace(output))
