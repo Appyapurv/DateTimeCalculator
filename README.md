@@ -6,5 +6,5 @@ Plan is to create UI and API that will help to track all the activity that we ke
 In UI we will able to view the Event and How many day's left for that event.
 
 
-**API Sample One- **
+**API Sample- **
 <img width="856" alt="image" src="https://user-images.githubusercontent.com/42620985/155287714-c959a09f-f569-4196-b9b0-94aff8a2705e.png">
